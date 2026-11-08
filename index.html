@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDIT: your name and a one-line description (shown in Google results) -->
+  <title>Your Name | Indian Institute of Science</title>
+  <meta name="description" content="Your Name: research, projects, publications and CV. Indian Institute of Science, Bengaluru.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="#top">Your Name</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#teaching">Teaching &amp; Talks</a></li>
+      <li><a href="#cv">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="about">
+    <img class="photo" src="assets/profile.svg" alt="Photo of Your Name" width="220" height="220">
+    <div>
+      <h1>Your Name</h1>
+      <!-- EDIT: your position and department -->
+      <p class="role">PhD Student · Department of ______<br>Indian Institute of Science, Bengaluru</p>
+
+      <!-- EDIT: 3–5 sentences about you and your research -->
+      <p>I am a researcher at the Indian Institute of Science working on <strong>your research area</strong>.
+        My work focuses on <em>topic one</em> and <em>topic two</em>, with applications in ______.
+        Before IISc, I studied ______ at ______.</p>
+
+      <p class="interests"><strong>Research interests:</strong> Interest one · Interest two · Interest three</p>
+
+      <!-- EDIT: delete any link you don't use -->
+      <ul class="links">
+        <li><a href="mailto:sanjaya@iisc.ac.in">Email</a></li>
+        <li><a href="https://scholar.google.com/">Google Scholar</a></li>
+        <li><a href="https://github.com/">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+        <li><a href="https://orcid.org/">ORCID</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="section-intro">Selected academic projects, each with a short summary and a downloadable report.</p>
+
+    <div class="cards">
+      <!-- TO ADD A PROJECT: copy one <article class="card"> ... </article> block, paste it, and edit.
+           Put the PDF in the files/projects/ folder and point the "Report (PDF)" link at it. -->
+
+      <article class="card">
+        <p class="meta">2025 · Course project, XX 201</p>
+        <h3>Project Title One</h3>
+        <p>One or two crisp sentences: what problem you tackled, how you approached it, and the key result
+          (e.g., "achieved 12% lower error than the baseline").</p>
+        <ul class="tags"><li>Python</li><li>Machine Learning</li></ul>
+        <p class="actions">
+          <a class="btn" href="files/projects/project-one.pdf" target="_blank" rel="noopener">Report (PDF)</a>
+          <a class="btn btn-ghost" href="https://github.com/">Code</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <p class="meta">2024 · Research project with Prof. ______</p>
+        <h3>Project Title Two</h3>
+        <p>Short description of the motivation, method and outcome. Keep it to two or three lines so the
+          cards stay easy to scan.</p>
+        <ul class="tags"><li>MATLAB</li><li>Signal Processing</li></ul>
+        <p class="actions">
+          <a class="btn" href="files/projects/project-two.pdf" target="_blank" rel="noopener">Report (PDF)</a>
+          <a class="btn btn-ghost" href="files/projects/project-two-slides.pdf" target="_blank" rel="noopener">Slides</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <p class="meta">2023 · Undergraduate thesis</p>
+        <h3>Project Title Three</h3>
+        <p>Short description of the motivation, method and outcome.</p>
+        <ul class="tags"><li>Simulation</li></ul>
+        <p class="actions">
+          <a class="btn" href="files/projects/project-three.pdf" target="_blank" rel="noopener">Thesis (PDF)</a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= PUBLICATIONS ================= -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <!-- TO ADD A PAPER: copy one <li> ... </li> block. Wrap your own name in <strong>. -->
+    <ol class="pubs" reversed>
+      <li>
+        <p class="pub-title">Title of Your Paper</p>
+        <p class="pub-authors"><strong>Your Name</strong>, Coauthor A, and Coauthor B</p>
+        <p class="pub-venue"><em>Conference or Journal Name</em>, 2025</p>
+        <p class="actions">
+          <a class="chip" href="files/papers/paper-2025.pdf" target="_blank" rel="noopener">PDF</a>
+          <a class="chip" href="https://doi.org/">DOI</a>
+          <a class="chip" href="https://arxiv.org/">arXiv</a>
+          <a class="chip" href="https://github.com/">Code</a>
+        </p>
+      </li>
+      <li>
+        <p class="pub-title">Title of Another Paper</p>
+        <p class="pub-authors">Coauthor A, <strong>Your Name</strong></p>
+        <p class="pub-venue"><em>Workshop or Journal Name</em>, 2024</p>
+        <p class="actions">
+          <a class="chip" href="files/papers/paper-2024.pdf" target="_blank" rel="noopener">PDF</a>
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ================= TEACHING & TALKS ================= -->
+  <section id="teaching">
+    <h2>Teaching &amp; Talks</h2>
+    <div class="two-col">
+      <div>
+        <h3>Teaching</h3>
+        <ul class="timeline">
+          <li><span class="when">Aug 2025</span><span><strong>Teaching Assistant</strong>, XX 201: Course Name, IISc</span></li>
+          <li><span class="when">Jan 2025</span><span><strong>Teaching Assistant</strong>, XX 102: Course Name, IISc</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Talks</h3>
+        <ul class="timeline">
+          <li><span class="when">Mar 2025</span><span>"Talk Title", Event or Seminar Name, City <a href="files/talks/talk-2025.pdf">(slides)</a></span></li>
+          <li><span class="when">Nov 2024</span><span>"Talk Title", Department Seminar, IISc</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CV ================= -->
+  <section id="cv">
+    <h2>Curriculum Vitae</h2>
+    <p><a class="btn" href="files/cv.pdf" target="_blank" rel="noopener">Download full CV (PDF)</a></p>
+
+    <div class="two-col">
+      <div>
+        <h3>Education</h3>
+        <ul class="timeline">
+          <li><span class="when">2024–present</span><span><strong>PhD, Department of ______</strong><br>Indian Institute of Science, Bengaluru</span></li>
+          <li><span class="when">2020–2024</span><span><strong>B.Tech / B.Sc in ______</strong><br>University Name</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Honours &amp; Awards</h3>
+        <ul class="timeline">
+          <li><span class="when">2024</span><span>Fellowship or award name</span></li>
+          <li><span class="when">2023</span><span>Scholarship, prize, or rank</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> Your Name · Last updated November 2026</p>
+</footer>
+
+<script>
+  // Mobile menu toggle and current year
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', e => { if (e.target.tagName === 'A') links.classList.remove('open'); });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
