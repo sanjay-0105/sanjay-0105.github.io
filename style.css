@@ -170,3 +170,6 @@ section { padding: 3.5rem 0 1rem; }
 @media (prefers-reduced-motion: reduce) {
   .hourglass, .sand-top, .sand-bottom, .sand-stream { animation: none; }
 }
+
+/* ===== Sub-headings inside a section (e.g. IST Lab Presentations) ===== */
+.subhead { font-size: 1.25rem; margin: 1.5rem 0 .25rem; }
