@@ -174,11 +174,14 @@ section { padding: 3.5rem 0 1rem; }
 /* ===== Sub-headings inside a section (e.g. IST Lab Presentations) ===== */
 .subhead { font-size: 1.25rem; margin: 1.5rem 0 .25rem; }
 
-/* ===== Visitor's Corner (embedded Google Form) ===== */
-.form-card {
+/* ===== Visitor's Corner (button to Google Form) ===== */
+.visitor-card {
+  display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
   background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
-  padding: .5rem; overflow: hidden;
+  padding: 1.5rem 1.75rem;
 }
-.form-card iframe { display: block; width: 100%; height: 900px; border: 0; border-radius: 8px; background: #fff; }
+.visitor-card p { margin: 0; }
+.visitor-card .stay-text { margin-top: .25rem; }
+.visitor-card .btn { flex: none; }
 .form-note { color: var(--muted); font-size: .85rem; margin-top: .75rem; }
-@media (max-width: 720px) { .form-card iframe { height: 1000px; } }
+@media (max-width: 720px) { .visitor-card { flex-direction: column; align-items: flex-start; } }
