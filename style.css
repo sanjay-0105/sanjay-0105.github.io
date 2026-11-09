@@ -199,3 +199,11 @@ section { padding: 3.5rem 0 1rem; }
 
 /* Long menu: allow wrapping on mid-size screens */
 @media (min-width: 721px) and (max-width: 1000px) { .nav-links { gap: 1rem; } .nav-links a { font-size: .88rem; } }
+
+/* ===== Thesis video ===== */
+.thesis-video { margin: 0 0 1rem; max-width: 720px; }
+.thesis-video video {
+  display: block; width: 100%; height: auto; aspect-ratio: 16 / 9;
+  border-radius: 10px; border: 1px solid var(--border); background: #000;
+}
+.thesis-video figcaption { color: var(--muted); font-size: .82rem; margin-top: .4rem; }
