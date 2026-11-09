@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications | Sanjay Adhikary</title>
+  <meta name="description" content="Publications by Sanjay Adhikary, Indian Institute of Science.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">Sanjay Adhikary</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="thesis.html">Thesis</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html" aria-current="page">Publications</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="visitors.html">Visitor's Corner</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= PUBLICATIONS ================= -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="stay-tuned">
+      <svg class="hourglass" viewBox="0 0 48 64" width="48" height="64" aria-hidden="true">
+        <path d="M6 4h36M6 60h36" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        <path d="M10 4c0 14 10 20 14 28c4-8 14-14 14-28M10 60c0-14 10-20 14-28c4 8 14 14 14 28"
+              fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+        <path class="sand-top" d="M15 12h18c-2 7-6 11-9 15c-3-4-7-8-9-15z" fill="currentColor" opacity=".55"/>
+        <path class="sand-bottom" d="M14 56c2-8 6-11 10-14c4 3 8 6 10 14z" fill="currentColor" opacity=".55"/>
+        <line class="sand-stream" x1="24" y1="32" x2="24" y2="44" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 3"/>
+      </svg>
+      <div>
+        <p class="stay-title">Stay tuned</p>
+        <p class="stay-text">Publications are on the way. Check back soon.</p>
+      </div>
+    </div>
+
+    <!-- WHEN YOU HAVE A PAPER: delete the "stay-tuned" block above, remove the
+         <template> and </template> lines below, and edit the paper details.
+         Copy one <li> ... </li> block per paper. Wrap your own name in <strong>. -->
+    <template>
+    <ol class="pubs" reversed>
+      <li>
+        <p class="pub-title">Title of Your Paper</p>
+        <p class="pub-authors"><strong>Sanjay Adhikary</strong>, Coauthor A, and Coauthor B</p>
+        <p class="pub-venue"><em>Conference or Journal Name</em>, 2025</p>
+        <p class="actions">
+          <a class="chip" href="files/papers/paper-2025.pdf" target="_blank" rel="noopener">PDF</a>
+          <a class="chip" href="https://doi.org/">DOI</a>
+          <a class="chip" href="https://arxiv.org/">arXiv</a>
+          <a class="chip" href="https://github.com/">Code</a>
+        </p>
+      </li>
+      <li>
+        <p class="pub-title">Title of Another Paper</p>
+        <p class="pub-authors">Coauthor A, <strong>Sanjay Adhikary</strong></p>
+        <p class="pub-venue"><em>Workshop or Journal Name</em>, 2024</p>
+        <p class="actions">
+          <a class="chip" href="files/papers/paper-2024.pdf" target="_blank" rel="noopener">PDF</a>
+        </p>
+      </li>
+    </ol>
+    </template>
+  </section>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> Sanjay Adhikary · Last updated November 2026</p>
+</footer>
+
+<script>
+  // Mobile menu toggle and current year
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', e => { if (e.target.tagName === 'A') links.classList.remove('open'); });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

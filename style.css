@@ -185,3 +185,17 @@ section { padding: 3.5rem 0 1rem; }
 .visitor-card .btn { flex: none; }
 .form-note { color: var(--muted); font-size: .85rem; margin-top: .75rem; }
 @media (max-width: 720px) { .visitor-card { flex-direction: column; align-items: flex-start; } }
+
+/* ===== Current page in the menu ===== */
+.nav-links a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+
+/* ===== Home page "Explore" cards ===== */
+.explore { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.explore-card { color: var(--text); transition: border-color .15s, transform .15s; }
+.explore-card:hover { text-decoration: none; border-color: var(--accent); transform: translateY(-2px); }
+.explore-card h3 { color: var(--accent); margin-bottom: .35rem; }
+.explore-card p { color: var(--muted); margin: 0; }
+@media (prefers-reduced-motion: reduce) { .explore-card { transition: none; } .explore-card:hover { transform: none; } }
+
+/* Long menu: allow wrapping on mid-size screens */
+@media (min-width: 721px) and (max-width: 1000px) { .nav-links { gap: 1rem; } .nav-links a { font-size: .88rem; } }

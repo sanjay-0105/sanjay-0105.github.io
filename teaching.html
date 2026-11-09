@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teaching | Sanjay Adhikary</title>
+  <meta name="description" content="Teaching experience of Sanjay Adhikary in civil engineering.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">Sanjay Adhikary</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="thesis.html">Thesis</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="teaching.html" aria-current="page">Teaching</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="visitors.html">Visitor's Corner</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= TEACHING ================= -->
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <!-- TO ADD A TEACHING ROLE: copy one <article class="thesis"> ... </article> block and edit it. -->
+    <article class="thesis">
+      <div class="thesis-side">
+        <p class="degree">Guest Lecturer</p>
+        <p class="when">Dec 2022 – May 2023</p>
+      </div>
+      <div>
+        <h3>Uttar Banga Krishi Viswavidyalaya (UBKV)</h3>
+        <p class="thesis-meta">Civil Engineering · Cooch Behar, West Bengal</p>
+        <p>Served as a Guest Lecturer in Civil Engineering at Uttar Banga Krishi Viswavidyalaya, teaching core
+          undergraduate subjects. Delivered lectures in Surveying, Strength of Materials and Soil Mechanics.
+          Conducted the corresponding laboratory sessions for these subjects, along with laboratory courses in
+          Concrete Technology and Fluid Mechanics. Prepared examination question papers and carried out the
+          assessment of students in both theory and practical components.</p>
+        <ul class="tags"><li>Surveying</li><li>Strength of Materials</li><li>Soil Mechanics</li><li>Concrete Technology</li><li>Fluid Mechanics</li></ul>
+      </div>
+    </article>
+  </section>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> Sanjay Adhikary · Last updated November 2026</p>
+</footer>
+
+<script>
+  // Mobile menu toggle and current year
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', e => { if (e.target.tagName === 'A') links.classList.remove('open'); });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

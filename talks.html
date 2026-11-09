@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talks | Sanjay Adhikary</title>
+  <meta name="description" content="Talks and IST Lab presentations by Sanjay Adhikary, Indian Institute of Science.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">Sanjay Adhikary</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="thesis.html">Thesis</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="talks.html" aria-current="page">Talks</a></li>
+      <li><a href="visitors.html">Visitor's Corner</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= TALKS ================= -->
+  <section id="talks">
+    <h2>Talks</h2>
+
+    <h3 class="subhead">IST Lab Presentations</h3>
+    <p class="section-intro">Monthly presentations at the IST Lab review meetings on methods and tools for transportation research.</p>
+
+    <!-- TO ADD A LAB PRESENTATION: copy one <article class="thesis"> ... </article> block (newest first).
+         Save the slides as PDF in files/talks/ and point the "Slides (PDF)" link at it. -->
+    <article class="thesis">
+      <div class="thesis-side">
+        <p class="degree">Lab Talk</p>
+        <p class="when">Sep 2026</p>
+      </div>
+      <div>
+        <h3>Experimental Design Types in Stated Choice Studies</h3>
+        <p class="thesis-meta">IST Lab Review Meeting · Department of Civil Engineering, IISc</p>
+        <p>An overview of experimental designs for stated choice surveys, comparing full factorial, fractional
+          factorial, orthogonal, efficient and orthogonal-in-differences designs and when each is appropriate.
+          The talk focuses on orthogonal designs and orthogonal blocking, showing how attribute-level balance and
+          zero correlation allow independent estimation of main effects, and how large designs can be split into
+          blocks without losing that balance. Worked examples on a multimodal survey of public transport, private
+          vehicles, ride-hailing and auto-rickshaws illustrate each step.</p>
+        <ul class="tags"><li>Choice Experiments</li><li>Orthogonal Design</li><li>Blocking</li><li>Stated Preference</li><li>SPSS</li></ul>
+        <p class="actions">
+          <a class="btn" href="files/talks/ist-lab-2026-09-choice-experiment-design.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
+        </p>
+      </div>
+    </article>
+  </section>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> Sanjay Adhikary · Last updated November 2026</p>
+</footer>
+
+<script>
+  // Mobile menu toggle and current year
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', e => { if (e.target.tagName === 'A') links.classList.remove('open'); });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

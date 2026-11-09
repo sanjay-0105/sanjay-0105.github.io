@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thesis | Sanjay Adhikary</title>
+  <meta name="description" content="Master's theses by Sanjay Adhikary in transportation systems (IISc) and environmental engineering (IIT Guwahati).">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">Sanjay Adhikary</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="thesis.html" aria-current="page">Thesis</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="visitors.html">Visitor's Corner</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= THESIS ================= -->
+  <section id="thesis">
+    <h2>Thesis</h2>
+    <p class="section-intro">Two master's theses spanning transportation systems and environmental engineering, from agent-based simulation of urban mobility to air-quality dispersion modelling.</p>
+
+    <!-- TO ADD A THESIS: copy one <article class="thesis"> ... </article> block, paste it, and edit.
+         Put the PDF in the files/thesis/ folder and point the "Thesis (PDF)" link at it. -->
+
+    <article class="thesis">
+      <div class="thesis-side">
+        <p class="degree">M.Tech</p>
+        <p class="when">2026</p>
+      </div>
+      <div>
+        <h3>Framework for Simulation-Based Assessment of First- and Last-Mile Fleet Sizing Strategies for a Multimodal Transit Interchange</h3>
+        <p class="thesis-meta">M.Tech in Civil Engineering · Indian Institute of Science, Bengaluru<br>
+          Supervisor: Dr. Tarun Rambha</p>
+        <p>An agent-based simulation in AnyLogic for sizing auto-rickshaw fleets at Yeshwantpur Railway
+          Station, Bengaluru, where mode choice across walking, auto, bus, metro and private vehicles is
+          modelled with a multinomial logit model calibrated on IRCTC reservation data and BMTC GTFS
+          schedules. The results show that last-mile bus use is held back by service gaps at the interchange
+          rather than by preference, and that waiting time is the strongest policy lever, which links fleet
+          sizing and bus scheduling as decisions that should be planned together.</p>
+        <ul class="tags"><li>Agent-Based Simulation</li><li>AnyLogic</li><li>Mode Choice (MNL)</li><li>First/Last-Mile</li><li>GTFS</li></ul>
+        <p class="actions">
+          <!-- Thesis PDF is on Google Drive with restricted access: visitors click, then "Request access" -->
+          <a class="btn" href="https://drive.google.com/file/d/1qrQ5hIpLW5XNS47k47SE38veHfw02bBH/view?usp=sharing" target="_blank" rel="noopener">Request Access (PDF)</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="thesis">
+      <div class="thesis-side">
+        <p class="degree">M.Tech</p>
+        <p class="when">2021–2022</p>
+      </div>
+      <div>
+        <h3>Dispersion Modelling of Gaseous Air Pollutants from the Digboi Oil Refinery</h3>
+        <p class="thesis-meta">M.Tech in Environmental Engineering · Indian Institute of Technology Guwahati<br>
+          Supervisor: Prof. Sharad Gokhale</p>
+        <p>This thesis estimates how much additional pollution the airshed around the Digboi oil refinery,
+          Assam, can safely absorb. Seasonal mixing height and ventilation coefficient were derived from
+          meteorological data, and AERMOD was used to model SO₂ and NOₓ dispersion from the refinery's
+          stacks at existing and maximum permissible loads. Although ventilation is low throughout the year
+          and monsoon is the most critical season, predicted concentrations remain well below NAAQS limits,
+          with the highest values 2.5–6.5 km downwind in the predominantly north-east wind direction, near
+          the railway station area.</p>
+        <ul class="tags"><li>Air Quality Modelling</li><li>AERMOD</li><li>Assimilative Capacity</li><li>SO₂ / NOₓ</li><li>Meteorology</li></ul>
+        <p class="actions">
+          <a class="btn" href="files/thesis/mtech-thesis-iitg.pdf" target="_blank" rel="noopener">Thesis (PDF)</a>
+        </p>
+      </div>
+    </article>
+  </section>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> Sanjay Adhikary · Last updated November 2026</p>
+</footer>
+
+<script>
+  // Mobile menu toggle and current year
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', e => { if (e.target.tagName === 'A') links.classList.remove('open'); });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

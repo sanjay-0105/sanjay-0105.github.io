@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Sanjay Adhikary</title>
+  <meta name="description" content="Academic projects by Sanjay Adhikary in optimisation, machine learning, discrete choice modelling and spatial data analysis.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">Sanjay Adhikary</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="thesis.html">Thesis</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="visitors.html">Visitor's Corner</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="section-intro">Projects at IISc spanning optimisation, machine learning, discrete choice modelling and spatial data analysis, each with a concise summary and the full report.</p>
+
+    <div class="cards">
+      <!-- TO ADD A PROJECT: copy one <article class="card"> ... </article> block, paste it, and edit.
+           Put the PDF in the files/projects/ folder and point the "Report (PDF)" link at it. -->
+
+      <article class="card">
+        <p class="meta">Nov–Dec 2025 · M.Tech course project · Dr. Tarun Rambha, CiSTUP, IISc</p>
+        <h3>An Exact Algorithm for the Multiple Vehicle Pickup and Delivery Problem</h3>
+        <p>Implemented Lu and Dessouky's exact integer-programming formulation for the pickup and delivery
+          problem, with valid inequalities and a branch-and-cut algorithm using a prediction heuristic. Tested
+          on Solomon's random and clustered datasets, it finds optimal routes for up to 15 customers within an
+          hour. Clustered instances with pickups and deliveries in different clusters proved the hardest.</p>
+        <ul class="tags"><li>Integer Programming</li><li>Branch-and-Cut</li><li>Gurobi</li><li>Vehicle Routing</li></ul>
+        <p class="actions">
+          <a class="btn" href="files/projects/pickup-delivery-problem.pdf" target="_blank" rel="noopener">Report (PDF)</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <p class="meta">Oct–Nov 2025 · M.Tech course project (CP219), team of 3 · Dr. Puneet Rathore, CPS, IISc</p>
+        <h3>Unsupervised Learning for Cyber Intrusion Detection in Power Substations</h3>
+        <p>Built an unsupervised system that flags cyber-attacks on power-substation network messages without
+          needing labelled attack data, by engineering timing and sequence features and comparing seven
+          anomaly-detection models. The best model (One-Class SVM) caught 88% of attacks with under 2% false
+          alarms, fast enough for real-time use.</p>
+        <ul class="tags"><li>Machine Learning</li><li>Anomaly Detection</li><li>Python</li><li>Cybersecurity</li><li>Power Systems</li></ul>
+        <p class="actions">
+          <a class="btn" href="files/projects/cyber-intrusion-detection.pdf" target="_blank" rel="noopener">Report (PDF)</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <p class="meta">Sept 2025 · M.Tech course project, team of 2 · Prof. Vijay Kovvali, CiSTUP, IISc</p>
+        <h3>Last-Mile Connectivity Analysis and Visualisation for Metro Systems</h3>
+        <p>A data-driven study of how metro riders in Bengaluru, Delhi and Nagpur complete the last mile,
+          combining interactive Power BI dashboards with QGIS maps of every station. It shows walking dominates
+          everywhere, longer last-mile trips also cost more, and pinpoints the stations that most need better
+          pedestrian access and feeder services.</p>
+        <ul class="tags"><li>Power BI</li><li>QGIS</li><li>Data Visualisation</li><li>Last-Mile</li><li>Statistics</li></ul>
+        <p class="actions">
+          <a class="btn" href="files/projects/last-mile-connectivity-analysis.pdf" target="_blank" rel="noopener">Report (PDF)</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <p class="meta">Jan–Apr 2025 · M.Tech course project (Choice Modelling), team of 3 · Prof. Abdul Rawoof Pinjari, IISc</p>
+        <h3>Mode Choice Modelling for the Swiss Metro</h3>
+        <p>A choice-modelling study of how Swiss travellers would choose between car, train and a proposed
+          high-speed Swiss Metro, comparing logit, nested logit and mixed logit models on stated-preference
+          survey data. Policy tests show cheaper or more frequent trains can shift demand away from the metro,
+          and travellers value time savings at about 0.83 Swiss francs per minute.</p>
+        <ul class="tags"><li>Discrete Choice Modelling</li><li>Mixed Logit</li><li>Stated Preference</li><li>Transport Policy</li></ul>
+        <p class="actions">
+          <a class="btn" href="files/projects/swiss-metro-mode-choice.pdf" target="_blank" rel="noopener">Report (PDF)</a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> Sanjay Adhikary · Last updated November 2026</p>
+</footer>
+
+<script>
+  // Mobile menu toggle and current year
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', e => { if (e.target.tagName === 'A') links.classList.remove('open'); });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

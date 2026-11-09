@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visitor's Corner | Sanjay Adhikary</title>
+  <meta name="description" content="Share your feedback with Sanjay Adhikary.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">Sanjay Adhikary</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="thesis.html">Thesis</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="talks.html">Talks</a></li>
+      <li><a href="visitors.html" aria-current="page">Visitor's Corner</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ================= VISITOR'S CORNER ================= -->
+  <section id="visitors">
+    <h2>Visitor's Corner</h2>
+    <div class="visitor-card">
+      <div>
+        <p class="stay-title">Share your feedback</p>
+        <p class="stay-text">Thank you for visiting. I would love to hear your thoughts on my work or this website.
+          The form asks for your name and feedback; contact details are optional.</p>
+      </div>
+      <!-- The button opens the Google Form in a new tab. Edits made in Google Forms apply automatically. -->
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeUmipaYHriRsqwhf1YXE3CcCMDotlLVErlLXMmDioTt7n1Bw/viewform" target="_blank" rel="noopener">Open feedback form</a>
+    </div>
+    <p class="form-note">Your details are used only to reply to you and are never shared.</p>
+  </section>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> Sanjay Adhikary · Last updated November 2026</p>
+</footer>
+
+<script>
+  // Mobile menu toggle and current year
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', e => { if (e.target.tagName === 'A') links.classList.remove('open'); });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
