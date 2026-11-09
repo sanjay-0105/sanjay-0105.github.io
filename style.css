@@ -200,10 +200,15 @@ section { padding: 3.5rem 0 1rem; }
 /* Long menu: allow wrapping on mid-size screens */
 @media (min-width: 721px) and (max-width: 1000px) { .nav-links { gap: 1rem; } .nav-links a { font-size: .88rem; } }
 
-/* ===== Thesis video ===== */
-.thesis-video { margin: 0 0 1rem; max-width: 720px; }
-.thesis-video video {
-  display: block; width: 100%; height: auto; aspect-ratio: 16 / 9;
-  border-radius: 10px; border: 1px solid var(--border); background: #000;
+/* ===== Pop-up video player (thesis demo) ===== */
+button.btn { font: inherit; font-size: .9rem; font-weight: 500; cursor: pointer; }
+.video-modal {
+  width: min(900px, calc(100vw - 32px)); padding: 0; border: 1px solid var(--border);
+  border-radius: 12px; background: var(--surface); color: var(--text);
 }
-.thesis-video figcaption { color: var(--muted); font-size: .82rem; margin-top: .4rem; }
+.video-modal::backdrop { background: rgba(0, 0, 0, .7); }
+.video-modal-head { display: flex; align-items: center; justify-content: space-between; padding: .6rem 1rem; }
+.video-modal-title { margin: 0; font-weight: 600; font-size: .95rem; }
+.video-close { background: none; border: 0; color: var(--muted); font-size: 1.6rem; line-height: 1; cursor: pointer; }
+.video-close:hover { color: var(--text); }
+.video-modal video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
