@@ -189,13 +189,60 @@ section { padding: 3.5rem 0 1rem; }
 /* ===== Current page in the menu ===== */
 .nav-links a[aria-current="page"] { color: var(--accent); font-weight: 600; }
 
-/* ===== Home page "Explore" cards ===== */
-.explore { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
-.explore-card { color: var(--text); transition: border-color .15s, transform .15s; }
-.explore-card:hover { text-decoration: none; border-color: var(--accent); transform: translateY(-2px); }
-.explore-card h3 { color: var(--accent); margin-bottom: .35rem; }
-.explore-card p { color: var(--muted); margin: 0; }
-@media (prefers-reduced-motion: reduce) { .explore-card { transition: none; } .explore-card:hover { transform: none; } }
+/* ===== Home page "Explore": metro map + cards ===== */
+.metro { margin: .5rem 0 1.75rem; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: .75rem 1rem; }
+.metro svg { display: block; width: 100%; height: auto; }
+.metro-line { stroke: var(--accent); stroke-width: 8; stroke-linecap: round; fill: none; }
+.metro-flow { stroke: var(--surface); stroke-width: 2; stroke-dasharray: 2 14; fill: none; opacity: .7; animation: metro-flow 1.2s linear infinite; }
+.metro-branch { stroke: #2e9e6b; stroke-width: 5; stroke-linecap: round; fill: none; opacity: .55; stroke-dasharray: 10 8; animation: metro-flow 3s linear infinite reverse; }
+.station circle { fill: var(--surface); stroke: var(--accent); stroke-width: 4; transition: r .2s, fill .2s; }
+.station text { font: 600 15px var(--sans); fill: var(--muted); transition: fill .2s; }
+.station:hover circle, .station:focus circle { r: 12; fill: var(--accent); }
+.station:hover text, .station:focus text { fill: var(--accent); }
+.station:focus { outline: none; }
+.train { animation: train-run 16s ease-in-out infinite; }
+.train rect { fill: #d9822b; }
+.train circle { fill: #fff; }
+@keyframes metro-flow { to { stroke-dashoffset: -16; } }
+@keyframes train-run {
+  0% { transform: translateX(0); }
+  45%, 55% { transform: translateX(910px); }
+  100% { transform: translateX(0); }
+}
+
+.explore-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.1rem; }
+.explore-card {
+  position: relative; display: block; color: var(--text); background: var(--surface);
+  border: 1px solid var(--border); border-top: 4px solid var(--c); border-radius: 12px;
+  padding: 1.25rem 1.25rem 2.25rem; transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.explore-card:hover, .explore-card:focus-visible {
+  text-decoration: none; transform: translateY(-4px);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--c) 22%, transparent); border-color: var(--c);
+}
+.explore-icon {
+  display: inline-grid; place-items: center; width: 46px; height: 46px; border-radius: 50%;
+  background: color-mix(in srgb, var(--c) 15%, transparent); color: var(--c); margin-bottom: .75rem;
+  transition: transform .3s;
+}
+.explore-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.explore-card:hover .explore-icon { transform: rotate(-8deg) scale(1.08); }
+.explore-card h3 { margin: 0 0 .35rem; }
+.explore-card p { margin: 0; color: var(--muted); font-size: .92rem; }
+.explore-go { position: absolute; right: 1.1rem; bottom: .8rem; color: var(--c); font-size: 1.2rem; transition: transform .2s; }
+.explore-card:hover .explore-go { transform: translateX(5px); }
+
+/* Scroll-in animation (only when JavaScript adds .js-anim) */
+.js-anim .explore-card { opacity: 0; transform: translateY(16px); }
+.js-anim .explore-card.in { opacity: 1; transform: none; transition: opacity .5s ease calc(var(--i) * 70ms), transform .5s ease calc(var(--i) * 70ms), box-shadow .2s, border-color .2s; }
+.js-anim .explore-card.in:hover { transform: translateY(-4px); transition-delay: 0s; }
+
+@media (max-width: 640px) { .metro { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .metro-flow, .metro-branch, .train { animation: none; }
+  .explore-card, .explore-icon, .explore-go { transition: none; }
+  .explore-card:hover { transform: none; }
+}
 
 /* Long menu: allow wrapping on mid-size screens */
 @media (min-width: 721px) and (max-width: 1000px) { .nav-links { gap: 1rem; } .nav-links a { font-size: .88rem; } }
